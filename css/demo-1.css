@@ -1,0 +1,337 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.header {
+  width: 1020px;
+  height: 36px;
+  margin: 0 auto;
+  background: black;
+}
+.header .logo {
+  width: 40px;
+  height: 20px;
+  float: left;
+  margin: 5px 35px;
+}
+.header .logo img {
+  width: 60px;
+  height: 25px;
+}
+.header .title {
+  float: left;
+}
+.header .title a {
+  width: 65px;
+  height: 36px;
+  display: inline-block;
+  color: #ffffff;
+  font-size: 10px;
+  text-align: center;
+  line-height: 36px;
+}
+.header .title a:hover {
+  background-color: #363c41;
+}
+.header .title a:nth-child(2) {
+  position: relative;
+  background-color: #363c41;
+}
+.header .title a:nth-child(2) img {
+  position: absolute;
+  top: 6px;
+  right: 5px;
+  width: 8px;
+  height: 8px;
+}
+.header .search {
+  float: right;
+  position: relative;
+}
+.header .search input {
+  display: inline-block;
+  border: 0;
+  outline: none;
+  border-bottom: 1px solid #ccc;
+  background-color: #000000;
+  margin-top: 15px;
+}
+.header .search:before {
+  content: '前端入门';
+  display: block;
+  position: absolute;
+  top: 8px;
+  width: 50px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 8px;
+  background-color: #363c41;
+  color: #959aa0;
+}
+.header .search-icon {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 5px;
+  right: 0px;
+  overflow: hidden;
+  transform: scale(0.6);
+}
+.header .icon {
+  float: right;
+}
+.header .icon-item {
+  width: 50px;
+  height: 36px;
+  float: left;
+}
+.header .icon-item:hover {
+  background-color: #363c41;
+}
+.header .icon-item .icon-size {
+  width: 22px;
+  height: 22px;
+  margin: 8px 15px;
+  transform: scale(0.6);
+  overflow: hidden;
+}
+.header .icon-item .ring {
+  position: relative;
+  top: -22px;
+  left: 0px;
+}
+.header .icon-item .clock {
+  position: relative;
+  top: -45px;
+  left: 0px;
+}
+.header .icon-item .ava {
+  transform: scale(1);
+  background-color: #ffffff;
+  position: absolute;
+  border-radius: 50%;
+}
+.header .icon-item .ava img {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 2px;
+  left: 1px;
+}
+.banner {
+  width: 1020px;
+  height: 300px;
+  margin: 0 auto;
+}
+.banner img {
+  width: 100%;
+  height: 300px;
+}
+.content {
+  width: 1020px;
+  height: 580px;
+  margin: 0 auto;
+  position: relative;
+}
+.content .box {
+  width: 652px;
+  height: 527px;
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  margin-left: -326px;
+}
+.content .box .top,
+.content .box .middle,
+.content .box .bottom {
+  height: 170px;
+  display: -webkit-flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.content .box .top .item,
+.content .box .middle .item,
+.content .box .bottom .item {
+  width: 160px;
+  height: 170px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #ffffff;
+  box-shadow: 1px 0px 1px #ccc;
+  position: relative;
+}
+.content .box .top .item span,
+.content .box .middle .item span,
+.content .box .bottom .item span {
+  width: 160px;
+  height: 170px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 2px;
+  left: 0px;
+  z-index: -1;
+  display: block;
+  border: 1px solid #ddd;
+  box-shadow: 0px 1px 1px #ddd;
+}
+.content .box .top .item img,
+.content .box .middle .item img,
+.content .box .bottom .item img {
+  width: 100%;
+  height: 60px;
+  border-radius: 6px 6px 0px 0px;
+}
+.content .box .top .item .price,
+.content .box .middle .item .price,
+.content .box .bottom .item .price {
+  color: #ff0000;
+  margin: 75px 0px 0px 10px;
+  font-size: 10px;
+}
+.content .box .top .item .intro,
+.content .box .middle .item .intro,
+.content .box .bottom .item .intro {
+  width: 100%;
+  height: 70px;
+  overflow: hidden;
+  position: absolute;
+  top: 65px;
+  background-color: #ffffff;
+}
+.content .box .top .item .intro:hover,
+.content .box .middle .item .intro:hover,
+.content .box .bottom .item .intro:hover {
+  animation: myfirst 2s;
+  animation-fill-mode: forwards;
+}
+@keyframes myfirst {
+  from {
+    height: 70px;
+    top: 65px;
+  }
+  to {
+    height: 120px;
+    top: 20px;
+  }
+}
+.content .box .top .item .intro p:nth-child(1),
+.content .box .middle .item .intro p:nth-child(1),
+.content .box .bottom .item .intro p:nth-child(1) {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 10px;
+  color: #07111b;
+}
+.content .box .top .item .intro p:nth-of-type(2),
+.content .box .middle .item .intro p:nth-of-type(2),
+.content .box .bottom .item .intro p:nth-of-type(2) {
+  font-size: 8px;
+  color: #959aa0;
+  margin-left: 10px;
+  width: 140px;
+  position: absolute;
+  top: 50px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #eee;
+}
+.content .box .top .item .intro p:nth-of-type(3),
+.content .box .middle .item .intro p:nth-of-type(3),
+.content .box .bottom .item .intro p:nth-of-type(3) {
+  font-size: 8px;
+  color: #959aa0;
+  margin-left: 10px;
+  position: absolute;
+  top: 70px;
+}
+.content .box .bottom .item {
+  margin: 0 auto;
+}
+.footer {
+  width: 1020px;
+  height: 60px;
+  position: relative;
+  margin: 0 auto;
+  background-color: #000000;
+}
+.footer .bottom-title {
+  width: 1020px;
+  text-align: center;
+}
+.footer .bottom-title a {
+  width: 60px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  color: #ffffff;
+  font-size: 10px;
+}
+.footer .bottom-title a:hover {
+  color: #959aa0;
+}
+.footer .copyright {
+  color: #959aa0;
+  font-size: 10px;
+  margin-left: 232px;
+  letter-spacing: 2px;
+}
+.footer .contact {
+  position: absolute;
+  top: 15px;
+  right: 90px;
+  float: right;
+}
+.footer .contact div {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #000000;
+  float: left;
+  margin-left: 5px;
+  overflow: hidden;
+}
+.footer .contact .weixin {
+  position: relative;
+}
+.footer .contact .weixin img {
+  width: 80px;
+  position: relative;
+  top: -130px;
+  left: 0px;
+}
+.footer .contact .Icode {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: -40px;
+  left: -10px;
+  overflow: hidden;
+  display: none;
+}
+.footer .contact .Icode img {
+  width: 40px;
+  position: relative;
+  top: 5px;
+  left: 0px;
+}
+.footer .contact .weibo img {
+  width: 80px;
+  position: relative;
+  top: -150px;
+  left: 0px;
+}
+.footer .contact .QQ img {
+  width: 80px;
+  position: relative;
+  top: -170px;
+  left: 0px;
+}

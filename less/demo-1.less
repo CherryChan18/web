@@ -1,0 +1,348 @@
+*{
+	margin:0;
+	padding:0;
+}
+a{
+	text-decoration:none;
+}
+// 设置宽高
+@header-height:36px;
+@banner-height:300px;
+@content-height:580px;
+@footer-height:60px;
+@width:1020px;
+
+// 设置样式
+.margin(){
+	margin:0 auto;
+}
+.font-size(@name){
+	font-size:@name;
+}
+.color(@name){
+	color:@name;
+}
+.bg-color(@name){
+	background-color:@name;
+}
+.border-radius(@name:50%){
+	border-radius:@name;
+}
+// 设置位置浮动
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+// 设置基本框架
+.header{
+	width:@width;
+	height:@header-height;
+   .margin();
+   background:black;
+   // 设置logo样式
+   .logo{
+     width:40px;
+     height:20px;
+     .fl();
+     margin:5px 35px;
+     img{
+     	width:60px;
+        height:25px;
+     }
+   }
+   // 设置title样式
+   .title{
+     .fl();
+      a{
+      	width:65px;
+        height:@header-height;
+        display:inline-block;
+       .color(white);
+       .font-size(10px);
+       text-align:center;
+       line-height:@header-height;
+       &:hover{
+       	.bg-color(#363c41);
+       }
+      }
+      a:nth-child(2){
+      	position:relative;
+      	.bg-color(#363c41);
+      	img{
+       position:absolute;
+       top:6px;
+       right:5px;
+       width:8px;
+       height:8px;
+       }
+    }
+} 
+   // 设置搜索部分
+    .search{
+   	.fr();
+   	position:relative;
+   	input{
+   		display:inline-block;
+   		border:0;
+   		outline:none;
+   		border-bottom:1px solid #ccc;
+   		.bg-color(black);
+   		margin-top:15px;
+   	}
+    &:before{
+    	content:'前端入门';
+    	display:block;
+    	position:absolute;
+        top:8px;
+        width:50px;
+        height:20px;
+        text-align:center;
+        line-height:20px;
+        .font-size(8px);
+        .bg-color(#363c41);
+        .color(#959aa0);
+    }
+    	&-icon{
+    	width:22px;
+    	height:22px;
+    	position:absolute;
+    	top:5px;
+    	right:0px;
+    	overflow:hidden;
+    	transform:scale(0.6);
+    }
+   }
+   // 设置图标部分
+   .icon{
+   	.fr();
+   	&-item{
+   		width:50px;
+   		height:@header-height;
+   		.fl();
+   		&:hover{.bg-color(#363c41)}
+   		.icon-size{
+   			width:22px;
+   			height:22px;
+   			// overflow:hidden;
+   			margin:8px 15px;
+   			transform:scale(0.6);
+   			overflow:hidden;
+   			}
+   		.ring{
+   			position:relative;
+   			top:-22px;
+   			left:0px;
+   		}
+   		.clock{
+   			position:relative;
+   			top:-45px;
+   			left:0px;
+   			}
+   		.ava{
+   		 transform:scale(1);
+         .bg-color(white);
+         position:absolute;
+         .border-radius();
+         img{
+         	width:20px;
+            height:20px;
+            position:relative;
+            top:2px;
+            left:1px;
+         }
+   		}
+   	}
+   }
+ }
+.banner{
+	width:@width;
+	height:@banner-height;
+   .margin();
+   img{
+   	// 这里为什么要设置宽度？
+   	width:100%;
+   	height:@banner-height;
+   }
+}
+.content{
+	width:@width;
+	height:@content-height;
+   .margin();
+   position:relative;
+   .box{
+   	width:652px;
+   	height:527px;
+   	position:absolute;
+   	top:-70px;
+   	left:50%;
+   	margin-left:-326px;
+   	.top,.middle,.bottom{
+      height:170px;
+      display:-webkit-flex;
+      justify-content:space-between;
+      margin-bottom:15px;
+      .item{
+      	width:160px;
+      	height:170px;
+      	.border-radius(6px);
+      	border:1px solid #ccc;
+      	.bg-color(white);
+      	box-shadow:1px 0px 1px #ccc;
+      	position:relative;
+      	span{
+      		width:160px;
+      		height:170px;
+      		.bg-color(white);
+      		position:absolute;
+      		top:2px;left:0px;
+      		z-index:-1;
+      		display:block;
+      		border:1px solid #ddd;
+      		box-shadow:0px 1px 1px #ddd;
+      	}
+      	img{
+      		width:100%;
+      		height:60px;
+      		border-radius:6px 6px 0px 0px;	
+      	}
+      	
+      	.price{
+      		.color(red);
+      		margin:75px 0px 0px 10px;
+      		.font-size(10px)
+      	}
+      	.intro{
+      		width:100%;
+      		height:70px;
+            overflow:hidden;
+            position:absolute;
+            top:65px;
+           .bg-color(white);
+            &:hover{
+             animation:myfirst 2s;
+             animation-fill-mode:forwards;
+
+            }
+            @keyframes myfirst{
+              from  {height:70px; top:65px;}
+               to  {height:120px;top:20px;}
+            }
+      		p:nth-child(1){
+      		.font-size(12px);
+      		font-weight:bold;
+      		padding:10px;
+      		.color(#07111b);
+      		}
+          p:nth-of-type(2){
+      		.font-size(8px);
+      	    .color(#959aa0);
+      	    margin-left:10px;
+      	    width:140px;
+      	    position:absolute;
+      	    top:50px;
+      	    padding-bottom:5px;
+      	    border-bottom:1px solid #eee;
+      	 }
+      	 p:nth-of-type(3){
+      		.font-size(8px);
+      	    .color(#959aa0);
+      	    margin-left:10px;
+      	    position:absolute;
+      	    top:70px;
+
+      	 }
+      	  	
+      	}
+      }
+   	}
+   	.bottom .item{
+   		margin:0 auto;
+   	}
+}
+}
+.footer{
+	width:@width;
+	height:@footer-height;
+	position:relative;
+   .margin();
+   .bg-color(black);
+   .bottom-title{
+   	width:@width;
+   	text-align:center;
+   a{
+   	width:60px;
+   	height:40px;
+   	line-height:40px;
+   	display:inline-block;
+   	.color(#fff);
+   	.font-size(10px);
+   	&:hover{
+   		.color(#959aa0)
+   	}
+   }
+    }
+   .copyright{
+   	.color(#959aa0);
+   	.font-size(10px);
+   	margin-left:232px;
+   	letter-spacing:2px;
+   }
+   .contact{
+   	position:absolute;
+    top:15px;
+    right:90px;
+   .fr();
+    div{
+    	width:15px;
+    	height:15px;
+    	.border-radius();
+    	.bg-color(black);
+    	.fl();
+    	margin-left:5px;
+    	overflow:hidden;
+    	}
+    	.weixin{
+    		position:relative;
+    		img{
+    		width:80px;
+    		position:relative;
+    		top:-130px;
+    		left:0px;
+    	}
+
+   }
+   .Icode{
+    		width:40px;
+    		height:40px;
+    		position:absolute;
+    		top:-40px;
+    		left:-10px;
+    		overflow:hidden;
+    		display:none;
+    		img{
+    			width:40px;
+    			position:relative;
+    		    top:5px;
+    		    left:0px;
+    		}
+    	}
+    	.weibo{
+    		img{
+    		width:80px;
+    		position:relative;
+    		top:-150px;
+    		left:0px;
+    	}
+    	}
+    	.QQ{
+    		img{
+    		width:80px;
+    		position:relative;
+    		top:-170px;
+    		left:0px;
+    	}
+    	}
+   }
+}

@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.banner {
+  width: 1020px;
+  height: 304px;
+  margin: 0 auto;
+  background: yellow;
+}
+.banner img {
+  width: 1020px;
+  height: 304px;
+}
+.content {
+  width: 1020px;
+  height: 909px;
+  margin: 0 auto;
+  background: blue;
+}
+.footer {
+  width: 1020px;
+  height: 50px;
+  margin: 0 auto;
+  background: black;
+}
